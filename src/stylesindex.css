@@ -1,0 +1,19 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #030303; /* Cor de fundo da logo */
+}
+#logo {
+    width: 300px; /* Tamanho ajustável */
+    height: auto;
+    margin-bottom: 20px;
+}
+#loading {
+    display: none;
+    font-size: 24px verdana;
+    color: white; /* Cor do texto de carregamento */
+} 
