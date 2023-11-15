@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/stylesindex.css">
+    <title>EconoBira$</title>
+    
+</head>
+<body>
+    <img id="logo" src="src/imagens/logo.jpg" alt="Logo">
+
+    <div id="loading">Iniciando App...</div>
+
+    <script>
+        // Redirecionar para a segunda página após 5 segundos
+        setTimeout(function() {
+            
+            window.location.href = "index2.html";
+        }, 5000);
+
+        // Exibir a mensagem de carregamento após 3 segundos
+        setTimeout(function() {
+            document.getElementById('loading').style.display = 'block';
+        }, 3000);
+    </script>
+</body>
+</html>

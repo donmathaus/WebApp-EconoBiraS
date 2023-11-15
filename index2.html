@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="src/styles.css">
+    <title>EconoBira$</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <label for="tipoGarrafa1"></label>
+        <select id="tipoGarrafa1" onchange="exibirImagem('tipoGarrafa1', 'imagemGarrafa1')">
+            <option value="0" data-imagem="src/imagens/imagempadrao.jpg" disabled selected hidden>Selecione uma opção</option>
+            <option value="269" data-imagem="src/imagens/imagem269.jpg">Lata 269ml</option>
+            <option value="300" data-imagem="src/imagens/imagem300.jpg">Garrafa 300ml</option>
+            <option value="330" data-imagem="src/imagens/imagem330.jpg">Long Neck 330ml</option>
+            <option value="350" data-imagem="src/imagens/imagem350.jpg">Lata 350ml</option>
+            <option value="355" data-imagem="src/imagens/imagem355.jpg">Long Neck 355ml</option>
+            <option value="473" data-imagem="src/imagens/imagem473.jpg">Latão 473ml</option>
+            <option value="600" data-imagem="src/imagens/imagem600.jpg">Garrafa 600ml</option>
+            <option value="1000" data-imagem="src/imagens/imagem1000.jpg">Garrafa 1L</option>
+        </select>
+        <img id="imagemGarrafa1" src="src/imagens/imagempadrao.jpg" alt="Imagem da Garrafa 1">
+
+        <label for="preco1">Bebida 1:</label>
+        <input type="text" id="preco1" placeholder="Insira o preço" oninput="validarPreco(this)">
+        <strong>------------------------------------------------------------</strong>
+        <label for="tipoGarrafa2"></label>
+        <select id="tipoGarrafa2" onchange="exibirImagem('tipoGarrafa2', 'imagemGarrafa2')">
+            <option value="0" data-imagem="src/imagens/imagempadrao.jpg" disabled selected hidden>Selecione uma opção</option>
+            <option value="269" data-imagem="src/imagens/imagem269.jpg">Lata 269ml</option>
+            <option value="300" data-imagem="src/imagens/imagem300.jpg">Garrafa 300ml</option>
+            <option value="330" data-imagem="src/imagens/imagem330.jpg">Long Neck 330ml</option>
+            <option value="350" data-imagem="src/imagens/imagem350.jpg">Lata 350ml</option>
+            <option value="355" data-imagem="src/imagens/imagem355.jpg">Long Neck 355ml</option>
+            <option value="473" data-imagem="src/imagens/imagem473.jpg">Latão 473ml</option>
+            <option value="600" data-imagem="src/imagens/imagem600.jpg">Garrafa 600ml</option>
+            <option value="1000" data-imagem="src/imagens/imagem1000.jpg">Garrafa 1L</option>
+        </select>
+        <img id="imagemGarrafa2" src="src/imagens/imagempadrao.jpg" alt="Imagem da Garrafa 2">
+
+        <label for="preco2">Bebida 2:</label>
+        <input type="text" id="preco2" placeholder="Insira o preço" oninput="validarPreco(this)">
+
+        <button onclick="compararPrecos()">Comparar</button>
+
+        <p id="resultado"></p>
+
+    </div>
+
+
+    <script src="src/script.js"> 
+    
+    </script>
+ 
+</body>
+<footer>EconoBira$ v1.0 alpha - Desenvolvido por Mathäus Hamermüller</footer>   
+</html>
