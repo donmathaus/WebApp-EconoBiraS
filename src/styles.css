@@ -10,7 +10,7 @@ body {
     margin: 20px auto;
     background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 30px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
     display: flex;
@@ -34,7 +34,7 @@ input {
     margin-bottom: 15px;
     box-sizing: border-box;
     border-color: #000000;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 button {
@@ -53,7 +53,9 @@ button:hover {
 
 #resultado {
     margin-top: 10px;
-    font-weight: bold;
+    font-size: smaller;
+    text-align: center;
+    
 }
 
 #imagemGarrafa1,
@@ -61,15 +63,15 @@ button:hover {
     max-width: 10%;
     height: auto;
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: block;
 }
 
 select {
     padding: 5px;
-    font-size: 16px;
+    font-size: 14px;
     border: 2px solid #ff0000;
-    border-radius: 10px;
+    border-radius: 15px;
     background-color: #fff;
     cursor: pointer;
     margin-bottom: 10px;
@@ -84,17 +86,33 @@ select:focus,
 select:active {
     border-color: #02f316;
     box-shadow: 0 0 5px rgba(108, 117, 125, 0.5);
+    
 }
 
 option {
     font-size: 14px;
 }
 
+.gif {
+    text-align: center; 
+  }
+  
+  .gif img {
+    max-width: 100px; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+  }
+
 #resultado .destaque-verde {
     color: green;
+    font-size: larger;
+    font-weight: bold;
+    
 }
 
 footer {
     text-align: center;
-    font-size: small;
+    font-size: x-small;
+
 }

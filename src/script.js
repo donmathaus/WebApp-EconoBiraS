@@ -1,3 +1,14 @@
+ // Redirecionar para a segunda página após 5 segundos
+ setTimeout(function() {
+            
+    window.location.href = "index2.html";
+}, 5000);
+
+// Exibir a mensagem de carregamento após 3 segundos
+setTimeout(function() {
+    document.getElementById('loading').style.display = 'block';
+}, 3000);
+
 function validarPreco(input) {
     // Substituir caracteres não permitidos (exceto números e vírgula)
     input.value = input.value.replace(/[^\d,]/g, '');
@@ -36,7 +47,6 @@ function compararPrecos() {
     ) {
         alert('Por favor, preencha e selecione todas as opções antes de comparar.');
         return;
-    
     }
 
     // Obter os valores de entrada
@@ -65,8 +75,30 @@ function compararPrecos() {
         economiaPercentual = 0;
     }
 
-    // Exibir o resultado
     
     var resultado = document.getElementById('resultado');
-    resultado.innerHTML = '<span class="destaque-verde">' + garrafaMaisBarata + '</span> é a opção mais barata. Você economizará ' + economiaPercentual.toFixed(2) + '%.';
-} 
+    var loadingAnimation = document.getElementById('loading-animation'); // Elemento para a animação de carregamento
+
+    // Oculta o resultado enquanto a animação de loading está em execução
+    resultado.style.display = 'none';
+
+    // Adiciona a classe para exibir a animação 
+    if (loadingAnimation) {
+        loadingAnimation.style.display = 'block'; // Mostra a animação
+    }
+
+    // Adiciona um atraso de 2.5 segundos (2500ms) antes de exibir o resultado
+    setTimeout(function () {
+        
+
+        resultado.innerHTML = '<span class="destaque-verde">' + garrafaMaisBarata + '</span> é a opção mais barata. Você economizará <span class="destaque-verde">' + economiaPercentual.toFixed(2) + '%</span>.';
+
+        // Exibe o resultado após a execução da animação
+        resultado.style.display = 'block';
+
+        // Oculta a animação de carregamento após exibir o resultado 
+        if (loadingAnimation) {
+            loadingAnimation.style.display = 'none'; // Esconde a animação após o resultado ser exibido
+        }
+    }, 2500); // Tempo em milissegundos
+}

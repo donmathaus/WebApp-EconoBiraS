@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="src/styles.css">
+    <link rel="shortcut icon" href="src/imagens/faviconsite.ico" />
     <title>EconoBira$</title>
 </head>
 <body>
@@ -25,7 +26,7 @@
         <img id="imagemGarrafa1" src="src/imagens/imagempadrao.jpg" alt="Imagem da Garrafa 1">
 
         <label for="preco1">Bebida 1:</label>
-        <input type="text" id="preco1" placeholder="Insira o preço" oninput="validarPreco(this)">
+        <input type="text" id="preco1" inputmode="numeric" pattern="[0-9]*" placeholder="Insira o preço" oninput="validarPreco(this)">
         
         <label for="tipoGarrafa2"></label>
         <select id="tipoGarrafa2" onchange="exibirImagem('tipoGarrafa2', 'imagemGarrafa2')">
@@ -42,9 +43,15 @@
         <img id="imagemGarrafa2" src="src/imagens/imagempadrao.jpg" alt="Imagem da Garrafa 2">
 
         <label for="preco2">Bebida 2:</label>
-        <input type="text" id="preco2" placeholder="Insira o preço" oninput="validarPreco(this)">
+        <input type="text" id="preco2" inputmode="numeric" pattern="[0-9]*" placeholder="Insira o preço" oninput="validarPreco(this)">
 
         <button onclick="compararPrecos()">Comparar</button>
+        <div id="loading-animation" style="display: none;">
+            
+            <figure class="gif">
+                <img src="src/imagens/gifloading.gif">
+            </figure>
+        </div>
 
         <p id="resultado"></p>
 
