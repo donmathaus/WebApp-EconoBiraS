@@ -28,9 +28,15 @@ function compararPrecos() {
     var preco1 = document.getElementById('preco1').value.trim();
     var preco2 = document.getElementById('preco2').value.trim();
 
-    if (!preco1 || !preco2) {
-        alert('Por favor, insira o preço para ambas as bebidas antes de comparar.');
+    if (
+        tipoGarrafa1.selectedIndex === 0 ||
+        tipoGarrafa2.selectedIndex === 0 ||
+        preco1 === '' ||
+        preco2 === ''
+    ) {
+        alert('Por favor, preencha e selecione todas as opções antes de comparar.');
         return;
+    
     }
 
     // Obter os valores de entrada
