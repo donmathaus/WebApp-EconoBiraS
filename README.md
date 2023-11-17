@@ -28,6 +28,7 @@ Para utilizar a ferramenta:
 
 ## Funcionalidades
 
+- Mobile First
 - Seleção de diferentes tipos de garrafas e inserção de preços para comparação.
 - Cálculo do preço por litro para cada bebida.
 - Imagens mudam de forma automática de acordo com o tipo de bebida escolhida pelo usuário.
@@ -43,3 +44,7 @@ Para utilizar a ferramenta:
 ## Licença
 
 Este projeto está sob a licença MIT - veja o arquivo [LICENSE.md](LICENSE.md) para detalhes.
+
+## Download (Android):
+
+https://drive.google.com/file/d/1bw_eZ-_YmFZ4Nkf0TQ_wheNbbPHLF62C/view?usp=sharing
